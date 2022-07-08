@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:24:38 by nfauconn          #+#    #+#              #
-#    Updated: 2022/07/08 16:28:48 by user42           ###   ########.fr        #
+#    Updated: 2022/07/08 16:50:45 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,12 +55,10 @@ RM = rm -f
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-all: ${OBJS}
+all: ${NAME}
+
+${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}
-
-${OBJS}: 
-
-${NAME}: all
 
 clean:
 	${RM} ${OBJS}
