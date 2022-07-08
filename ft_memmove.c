@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfauconn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:53:30 by nfauconn          #+#    #+#             */
-/*   Updated: 2019/11/26 18:56:17 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:38:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,23 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *dest;
-	char *source;
-	char *lastd;
-	char *lasts;
+	unsigned char	*dest_addr;
+	unsigned char	*source_addr;
+	size_t	i;
 
-	if (dst == NULL && src == NULL)
+	if (!dst && !src)
 		return (NULL);
-	dest = (char *)dst;
-	source = (char *)src;
-	if (dest < source)
-	{
+	if (dst == src || !len)
+		return (dst);
+	dest_addr = dst;
+	source_addr = (void *)src;
+	if (source_addr > dest_addr && source_addr - dest_addr < (int)len)
 		while (len--)
-			*dest++ = *source++;
-	}
+			*dest_addr++ = *source_addr++;
+	else if (dest_addr < source_addr && dest_addr - source_addr < (int)len)
+		while (len--)
+			dest_addr[len] = source_addr[len];
 	else
-	{
-		lastd = dest + (len - 1);
-		lasts = source + (len - 1);
-		while (len--)
-			*lastd-- = *lasts--;
-	}
+		memcpy(dst, src, len);
 	return (dst);
 }
