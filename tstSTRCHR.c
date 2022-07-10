@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   tstSTRCHR.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 14:08:15 by nfauconn          #+#    #+#             */
-/*   Updated: 2022/07/10 11:17:33 by nfauconn         ###   ########.fr       */
+/*   Created: 2022/07/10 11:18:08 by nfauconn          #+#    #+#             */
+/*   Updated: 2022/07/10 11:50:40 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <bsd/string.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+
+int main()
 {
-	size_t i;
-
-	if (!src)
-		return (0);
-	i = 0;
-	if (dst && dstsize)
-	{
-		while (i < dstsize - 1 && src[i])
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(src));
+	printf("%s\n", strrchr("lol", '\0'));
 }
