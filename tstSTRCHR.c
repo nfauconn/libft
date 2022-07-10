@@ -6,7 +6,7 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 11:18:08 by nfauconn          #+#    #+#             */
-/*   Updated: 2022/07/10 11:50:40 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/07/10 17:50:35 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 
 int main()
 {
-	printf("%s\n", strrchr("lol", '\0'));
+//	printf("%s\n", strchr("blabla", 't' + 256));
+	printf("%s\n", ft_strchr("blabla", 't' + 256));
 }

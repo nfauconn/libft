@@ -6,7 +6,7 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:58:22 by nfauconn          #+#    #+#             */
-/*   Updated: 2022/07/10 14:13:20 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/07/10 18:16:34 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,17 @@ static void	clear_tab(char **tab, int index)
 	free(tab);
 }
 
-static char	*fill_tab(const char *s, int i, char c)
+static char	*fill_tab(const char *s, int *i, char c)
 {
 	char	*tab_line;
 	int		j;
 
-	tab_line = malloc(sizeof(char) * (len_until_sep(s + i, c) + 1));
+	tab_line = (char *)malloc(sizeof(char) * (len_until_sep(s + *i, c) + 1));
 	if (!s)
 		return (NULL);
 	j = 0;
-	while (s[i] && s[i] != c)
-		tab_line[j++] = s[i++];
+	while (s[*i] && s[*i] != c)
+		tab_line[j++] = s[(*i)++];
 	tab_line[j] = '\0';
 	return (tab_line);
 }
@@ -84,13 +84,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	index = 0;
-	while (s[i] && (index < line_nb(s, c)))
+	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		tab[index] = fill_tab(s, i, c);
+		tab[index] = fill_tab(s, &i, c);
 		if (!tab[index])
-		{	
+		{
 			clear_tab(tab, index);
 			return (NULL);
 		}
