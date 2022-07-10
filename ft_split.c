@@ -3,67 +3,97 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfauconn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:58:22 by nfauconn          #+#    #+#             */
-/*   Updated: 2019/12/02 21:30:13 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/07/10 14:13:20 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int		str_nb(char const *s, char c)
+static int	line_nb(char const *s, char c)
 {
 	int		i;
-	int		str_nb;
+	int		line_nb;
 
 	i = 0;
 	while (s[i] && (s[i] == c))
 		i++;
-	str_nb = 0;
+	line_nb = 0;
 	while (s[i])
 	{
 		while (s[i] && (s[i] != c))
 			i++;
-		str_nb++;
+		line_nb++;
 		while (s[i] && (s[i] == c))
 			i++;
 	}
-	return (str_nb);
+	return (line_nb);
 }
 
-static int		str_len(const char *s, char c)
+static int	len_until_sep(const char *s, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (s[i] != c && s[i])
+	while (s[i] && s[i] != c)
 		i++;
 	return (i);
 }
 
-char			**ft_split(char const *s, char c)
+static void	clear_tab(char **tab, int index)
+{
+	int	i;
+
+	i = 0;
+	while (i < index)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
+
+static char	*fill_tab(const char *s, int i, char c)
+{
+	char	*tab_line;
+	int		j;
+
+	tab_line = malloc(sizeof(char) * (len_until_sep(s + i, c) + 1));
+	if (!s)
+		return (NULL);
+	j = 0;
+	while (s[i] && s[i] != c)
+		tab_line[j++] = s[i++];
+	tab_line[j] = '\0';
+	return (tab_line);
+}
+
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		index;
 	int		i;
-	int		j;
 
-	index = 0;
-	i = 0;
-	if ((!s) || !(tab = malloc(sizeof(s) * (str_nb(s, c) + 1))))
+	if (!s)
 		return (NULL);
-	while (s[i] && (index < str_nb(s, c)))
+	tab = (char **)malloc(sizeof(char *) * (line_nb(s, c) + 1));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	index = 0;
+	while (s[i] && (index < line_nb(s, c)))
 	{
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
-		if (!(tab[index] = malloc(sizeof(char) * (str_len(s + i, c) + 1))))
+		tab[index] = fill_tab(s, i, c);
+		if (!tab[index])
+		{	
+			clear_tab(tab, index);
 			return (NULL);
-		j = 0;
-		while (s[i] && s[i] != c)
-			tab[index][j++] = s[i++];
-		tab[index][j] = '\0';
+		}
 		index++;
 	}
 	tab[index] = NULL;

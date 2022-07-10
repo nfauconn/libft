@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfauconn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:05:40 by nfauconn          #+#    #+#             */
-/*   Updated: 2019/12/03 00:07:32 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/07/10 14:43:47 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*new;
-	unsigned int	i;
 	unsigned int	s_len;
 
 	if (!s)
@@ -25,15 +24,16 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		len = s_len - start;
 	if (start > s_len)
 	{
-		if (!(new = (char*)malloc(sizeof(char) * 1)))
+		new = (char *)malloc(sizeof(char) * 1);
+		if (!new)
 			return (NULL);
 		new[0] = '\0';
 		return (new);
 	}
-	if (!(new = (char*)malloc(sizeof(char) * (len + 1))))
+	new = (char *)malloc(sizeof(char) * (len + 1));
+	if (!new)
 		return (NULL);
-	i = 0;
-	new = (char*)ft_memcpy(new, s + start, len + 1);
+	new = (char *)ft_memcpy(new, s + start, len + 1);
 	new[len] = '\0';
 	return (new);
 }
