@@ -6,19 +6,20 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 16:22:20 by nfauconn          #+#    #+#             */
-/*   Updated: 2024/01/23 14:13:25 by nfauconn         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:22:34 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
+# include <limits.h>
 # include <ctype.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
+# include <unistd.h>
 
 typedef struct s_list
 {

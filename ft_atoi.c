@@ -6,7 +6,7 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:07:02 by nfauconn          #+#    #+#             */
-/*   Updated: 2024/01/23 14:10:41 by nfauconn         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:24:49 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *s)
 
 	nbr = 0;
 	sign = 1;
-	while (*s == 32 || (*s >= 9 && *s <= 13))
+	while (*s == ' ' || (*s >= '\t' && *s <= '\r'))
 		s++;
 	if (*s == '-')
 	{
@@ -33,7 +33,7 @@ int	ft_atoi(const char *s)
 		nbr = (nbr * 10) + (*s - '0');
 		s++;
 	}
-	if (nbr > 9223372036854775807)
+	if (nbr > LLONG_MAX)
 		return ((-1) * sign);
 	return ((int)(nbr * sign));
 }
