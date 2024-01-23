@@ -6,11 +6,15 @@
 #    By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:24:38 by nfauconn          #+#    #+#              #
-#    Updated: 2022/07/10 15:45:57 by nfauconn         ###   ########.fr        #
+#    Updated: 2022/08/07 01:18:50 by nfauconn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+NAME_BONUS = libft.a
+
+HEADER = libft.h
 
 SRCS = \
 	${addsuffix .c, \
@@ -35,6 +39,7 @@ SRCS = \
 	ft_split \
 	ft_strchr \
 	ft_strdup \
+	ft_striteri \
 	ft_strjoin \
 	ft_strlcat \
 	ft_strlcpy \
@@ -69,8 +74,14 @@ RM = rm -f
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+${NAME}: ${HEADER} ${OBJS} $(SRCS)
+	ar rc ${NAME} ${OBJS}
+
+bonus: ${OBJS} ${OBJS_BONUS}
+	ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
+
+%.o: %.c
+	${COMP} -c $< -o $@
 
 clean:
 	${RM} ${OBJS} ${OBJS_BONUS}
@@ -80,7 +91,4 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${OBJS} ${OBJS_BONUS}
-	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
-
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

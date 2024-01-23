@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tstSTRCHR.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/10 11:18:08 by nfauconn          #+#    #+#             */
-/*   Updated: 2022/07/10 17:50:35 by nfauconn         ###   ########.fr       */
+/*   Created: 2022/08/07 01:10:45 by nfauconn          #+#    #+#             */
+/*   Updated: 2022/08/07 01:29:13 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
 
-
-int main()
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-//	printf("%s\n", strchr("blabla", 't' + 256));
-	printf("%s\n", ft_strchr("blabla", 't' + 256));
+	unsigned int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (*s)
+	{
+		f(i, s);
+		i++;
+		s++;
+	}
 }

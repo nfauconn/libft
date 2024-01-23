@@ -6,7 +6,7 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:59:42 by nfauconn          #+#    #+#             */
-/*   Updated: 2022/07/10 13:06:34 by nfauconn         ###   ########.fr       */
+/*   Updated: 2022/08/07 00:26:14 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*tab;
 
+	if (count >= __SIZE_MAX__ && size >= __SIZE_MAX__)
+		return (NULL);
 	tab = malloc(count * size);
 	if (!tab)
 		return (NULL);
