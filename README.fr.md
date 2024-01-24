@@ -3,7 +3,7 @@
 
 # Projet: Libft
 
-## Objectif
+## 🏁 Objectif 🏁
 Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
 
 ## Enjeux et apprentissages
