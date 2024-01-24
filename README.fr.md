@@ -3,8 +3,8 @@
 
 # Projet: Libft
 
-## Introduction
-Libft est notre premier projet en tant qu'étudiant à 42. Le but est de créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
+## Objectif
+Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
 
 ## Enjeux et apprentissages
 
