@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-pink.svg)](https://github.com/nfauconn/libft/README.md)
+[![fr](https://img.shields.io/badge/lang-fr-purple.svg)](https://github.com/nfauconn/libft/README.md/README.fr.md)
+
 # Project: Libft
 
 ## Goal
