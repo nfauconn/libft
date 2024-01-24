@@ -6,14 +6,14 @@
 ## 🏁 Objectif 🏁
 Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
 
-## Enjeux et apprentissages
+## 💡 Enjeux et apprentissages 💡
 
-### Langage C
+### 🌐 Langage: C 🌐
   - **Analyse et Réingénierie de Fonctions Standards de la libc:** Compréhension du fonctionnement interne et capacité à recoder des fonctions standards pour une maîtrise approfondie.
-  - **Maîtrise Avancée des Pointeurs:** Utilisation des pointeurs pour une gestion précise de la mémoire et des structures de données.
-  - **Gestion Expert de la Mémoire:** Techniques avancées de gestion de la mémoire, y compris allocation, libération, et optimisation de l'utilisation de la mémoire.
+  - **Maîtrise des Pointeurs:** Utilisation des pointeurs pour une gestion précise de la mémoire et des structures de données.
+  - **Gestion de la Mémoire:** Techniques avancées de gestion de la mémoire, y compris allocation, libération, et optimisation de l'utilisation de la mémoire.
 
-### Pratiques de Développement et Outils
+### 🔧 Pratiques de Développement et Outils 🔧 
 
 - **Maîtrise de l'Automatisation de Compilation avec Makefile** : Utilisation de Makefile pour la création de règles de compilation automatisées, optimisant ainsi le processus de build.
   
@@ -23,7 +23,7 @@ Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la l
 
 - **Intégration Basique des Flux de Travail Git** : Maîtrise des commandes fondamentales telles que `git add`, `git commit`, `git push`, et `git pull` pour un contrôle efficace des versions.
 
-## Contenu du Projet
+## 📋 Contenu du Projet 📋 
 
 ### Recoder un ensemble de fonctions de la libc
 1. **Sans aucune fonction externe**: isalpha
