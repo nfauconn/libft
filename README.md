@@ -6,22 +6,29 @@
 ## 🏁 Goal 🏁
 Create our own C library by recoding a set of functions from the libc, as well as other utility functions.
 
-## 🔮 Challenges and Learning 🔮
+## 💡 Challenges and Learning 💡
 
 ### 🌐 Language: C 🌐
-  - 💡 **Analysis and Re-engineering of Standard libc Functions**: 💡 Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
-  - 💡 **Mastery of Pointers**: 💡  Using pointers for precise memory management and data structures.
-  - 💡 **Memory Management**: 💡  Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
+  - **Analysis and Re-engineering of Standard libc Functions**:
+    - Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
+  - **Mastery of Pointers**:
+    - Using pointers for precise memory management and data structures.
+  - **Memory Management**:
+    - Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
 
 ### 🔧 Development Practices and Tools 🔧
 
-- 💡 **Mastery of Compilation Automation with Makefile**: 💡 Using Makefile for creating automated compilation rules, thus optimizing the build process.
+- **Mastery of Compilation Automation with Makefile**:
+  - Using Makefile for creating automated compilation rules, thus optimizing the build process.
   
-- 💡 **Adherence to Coding Standards and Normative Writing (42 norm)**: 💡  Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
+- **Adherence to Coding Standards and Normative Writing (42 norm)**:
+  - Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
 
-- 💡 **Development of Skills in Research and Technical Documentation**: 💡  Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
+- **Development of Skills in Research and Technical Documentation**:
+  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
 
-- 💡 **Basic Integration of Git Workflow**: 💡  Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
+- **Basic Integration of Git Workflow**:
+  - Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
 
 ## 📋 Subject 📋
 
