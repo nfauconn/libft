@@ -1,31 +1,31 @@
-# Projet: Libft
+# Project: Libft
 
-## Introduction
-Libft est notre premier projet en tant qu'étudiant à 42. Le but est de créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
+## Goal
+Create our own C library by recoding a set of functions from the libc, as well as other utility functions.
 
-## Enjeux et apprentissages
+## Challenges and Learning
 
-### Langage C
-  - **Analyse et Réingénierie de Fonctions Standards de la libc:** Compréhension du fonctionnement interne et capacité à recoder des fonctions standards pour une maîtrise approfondie.
-  - **Maîtrise Avancée des Pointeurs:** Utilisation des pointeurs pour une gestion précise de la mémoire et des structures de données.
-  - **Gestion Expert de la Mémoire:** Techniques avancées de gestion de la mémoire, y compris allocation, libération, et optimisation de l'utilisation de la mémoire.
+### C Language
+  - **Analysis and Re-engineering of Standard libc Functions:** Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
+  - **Advanced Mastery of Pointers:** Using pointers for precise memory management and data structures.
+  - **Expert Memory Management:** Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
 
-### Pratiques de Développement et Outils
+### Development Practices and Tools
 
-- **Maîtrise de l'Automatisation de Compilation avec Makefile** : Utilisation de Makefile pour la création de règles de compilation automatisées, optimisant ainsi le processus de build.
+- **Mastery of Compilation Automation with Makefile**: Using Makefile for creating automated compilation rules, thus optimizing the build process.
   
-- **Adhésion aux Standards de Codage et Rédaction Normative (norme de 42)** : Application rigoureuse de la norme de codage 42 pour assurer la lisibilité, la maintenabilité et la qualité du code, tout en facilitant la collaboration et l'évaluation par les pairs.
+- **Adherence to Coding Standards and Normative Writing (42 norm)**: Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
 
-- **Développement de Compétences en Recherche et en Documentation Technique** : Cultivation d'une approche méthodique pour la recherche et la compréhension de documentation technique, renforçant ainsi l'autonomie dans la résolution de problèmes et l'apprentissage de nouvelles technologies.
+- **Development of Skills in Research and Technical Documentation**: Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
 
-- **Intégration Basique des Flux de Travail Git** : Maîtrise des commandes fondamentales telles que `git add`, `git commit`, `git push`, et `git pull` pour un contrôle efficace des versions.
+- **Basic Integration of Git Workflow**: Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
 
-## Contenu du Projet
+## Project Content
 
-### Recoder un ensemble de fonctions de la libc
-1. **Sans aucune fonction externe**: isalpha
+### Recoding a set of libc functions
+1. **Without any external function**: isalpha
 • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi
-2. **En utilisant uniquement `malloc`**: calloc
+2. **Using only `malloc`**: calloc
 • strdup
 ```c
 #include "libft.h"
@@ -56,18 +56,18 @@ int	ft_atoi(const char *s)
 	return ((int)(nbr * sign));
 }
 ```
-### Coder des fonctions utilitaires
-- `ft_substr`: Alloue (avec malloc(3)) et retourne une chaîne de caractères issue de la chaîne ’s’.  Cette nouvelle chaîne commence à l’index ’start’ et a pour taille maximale ’len’.
-- `ft_strtrim`: Alloue (avec malloc(3)) et retourne une copie de la chaîne ’s1’, sans les caractères spécifiés dans ’set’ au début et à la fin de la chaîne de caractères.
-- `ft_split`: Alloue (avec malloc(3)) et retourne un tableau de chaînes de caractères obtenu en séparant ’s’ à l’aide du caractère ’c’, utilisé comme délimiteur.
-- `ft_strjoin`: Alloue (avec malloc(3)) et retourne une nouvelle chaîne, résultat de la concaténation de s1 et s2.
-- `ft_itoa`: Alloue (avec malloc(3)) et retourne une chaîne de caractères représentant l’entier ’n’ reçu en argument. Les nombres négatifs doivent être gérés.
-- `ft_strmapi`: Applique la fonction ’f’ à chaque caractère de la chaîne de caractères passée en argument pour créer une nouvelle chaîne de caractères résultant des applications successives de ’f’.
-- `ft_striteri`: Applique la fonction ’f’ à chaque caractère de la chaîne de caractères transmise comme argument, et en passant son index comme premier argument.  Chaque caractère est transmis par adresse à ’f’ afin d’être modifié si nécessaire.
-- `ft_putchar_fd`: Écrit le caractère ’c’ sur le descripteur de fichier donné.
-- `ft_putstr_fd`: Écrit la chaîne de caractères ’s’ sur le descripteur de fichier donné.
-- `ft_putendl_fd`: Écrit La chaîne de caractères ’s’ sur le descripteur de fichier donné suivie d’un retour à la ligne.
-- `ft_putnbr_fd`: Écrit l’entier ’n’ sur le descripteur de fichier donné.
+### Coding Utility Functions
+- `ft_substr`: Allocates (with malloc(3)) and returns a string from the string ’s’. This new string starts at index ’start’ and has a maximum size of ’len’.
+- `ft_strtrim`: Allocates (with malloc(3)) and returns a copy of the string ’s1’, without the characters specified in ’set’ at the beginning and the end of the string.
+- `ft_split`: Allocates (with malloc(3)) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter.
+- `ft_strjoin`: Allocates (with malloc(3)) and returns a new string, resulting from the concatenation of s1 and s2.
+- `ft_itoa`: Allocates (with malloc(3)) and returns a string representing the integer ’n’ received as an argument. Negative numbers must be handled.
+- `ft_strmapi`: Applies the function ’f’ to each character of the string passed as an argument to create a new string resulting from successive applications of ’f’.
+- `ft_striteri`: Applies the function ’f’ to each character of the string passed as an argument, and passing its index as the first argument. Each character is passed by address to ’f’ to be modified if necessary.
+- `ft_putchar_fd`: Writes the character ’c’ on the given file descriptor.
+- `ft_putstr_fd`: Writes the string ’s’ on the given file descriptor.
+- `ft_putendl_fd`: Writes the string ’s’ on the given file descriptor followed by a newline.
+- `ft_putnbr_fd`: Writes the integer ’n’ on the given file descriptor.
 
 ```c
 #include "libft.h"
@@ -124,16 +124,16 @@ void	ft_putnbr_fd(int n, int fd)
 }
 ```
  
-### Partie Bonus: manipulation de listes
-- `ft_lstnew`: Alloue (avec malloc(3)) et renvoie un nouvel élément. La variable membre ’content’ est initialisée à l’aide de la valeur du paramètre ’content’. La variable ’next’ est initialisée à NULL.
-- `ft_lst_add_front`: Ajoute l’élément ’new’ au début de la liste.
-- `ft_lst_add_back`: Ajoute l’élément ’new’ à la fin de la liste.
-- `ft_lst_size`: Compte le nombre d’éléments de la liste.
-- `ft_lst_last`: Renvoie le dernier élément de la liste.
-- `ft_lst_delone`: Libère la mémoire de l’élément passé en argument en utilisant la fonction ’del’ puis avec free(3). La mémoire de ’next’ ne doit pas être free.
-- `ft_lst_clear`: Supprime et libère la mémoire de l’élément passé en paramètre, et de tous les éléments qui suivent, à l’aide de ’del’ et de free(3) Enfin, le pointeur initial doit être mis à NULL.
-- `ft_lst_iter`: Itère sur la liste ’lst’ et applique la fonction ’f’ au contenu chaque élément.
-- `ft_lst_map`: Itère sur la liste ’lst’ et applique la fonction ’f ’au contenu de chaque élément. Crée une nouvelle liste résultant des applications successives de ’f’. La fonction ’del’ est là pour détruire le contenu d’un élément si nécessaire.
+### Bonus Part: list manipulation
+- `ft_lstnew`: Allocates (with malloc(3)) and returns a new element. The member variable ’content’ is initialized using the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
+- `ft_lst_add_front`: Adds the element ’new’ at the beginning of the list.
+- `ft_lst_add_back`: Adds the element ’new’ at the end of the list.
+- `ft_lst_size`: Counts the number of elements in the list.
+- `ft_lst_last`: Returns the last element of the list.
+- `ft_lst_delone`: Frees the memory of the element passed as an argument using the function ’del’ then with free(3). The memory of ’next’ must not be freed.
+- `ft_lst_clear`: Deletes and frees the memory of the element passed as a parameter, and all the elements that follow, using ’del’ and free(3). Finally, the initial pointer should be set to NULL.
+- `ft_lst_iter`: Iterates over the list ’lst’ and applies the function ’f’ to the content of each element.
+- `ft_lst_map`: Iterates over the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting from successive applications of ’f’. The function ’del’ is there to destroy the content of an element if necessary.
 
 ```c
 #include "libft.h"
@@ -148,11 +148,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	curr = *lst;
-	while (curr->next)
+	while (curr->
+
+next)
 		curr = curr->next;
 	curr->next = new;
 }
 ```
 
-## Ressources et Documentation
-- [Manuels de la libc](https://linux.die.net/man/)
+## Resources and Documentation
+- [Libc Manuals](https://linux.die.net/man/)
