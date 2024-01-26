@@ -28,6 +28,8 @@ Create our own C library by recoding a set of functions from the libc, as well a
 
 ## 📋 Subject 📋
 
+Solo project
+
 ### Recoding a set of libc functions
 1. **Without any external function**: isalpha
 • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi

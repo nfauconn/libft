@@ -25,6 +25,8 @@ Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la l
 
 ## 📋 Contenu du Projet 📋 
 
+Projet solo
+
 ### Recoder un ensemble de fonctions de la libc
 1. **Sans aucune fonction externe**: isalpha
 • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi
