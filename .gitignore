@@ -1,2 +1,4 @@
 .vscode
-a.out
+Project/a.out
+Project/*.o
+Project/*.a
