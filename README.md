@@ -4,7 +4,7 @@
 # Project: Libft
 
 ## 🏁 Goal 🏁
-Create our own C library by recoding a set of functions from the libc, as well as other utility functions.
+Recoding a set of functions from the libc, as well as other utility functions.
 
 ## 💡 Learning 💡
 
@@ -17,12 +17,12 @@ Create our own C library by recoding a set of functions from the libc, as well a
     - Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
 
 ### 🔧 Development Practices and Tools 🔧
+- **Development of Skills in Research and Technical Documentation**:
+  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
 - **Mastery of Compilation Automation with Makefile**:
   - Using Makefile for creating automated compilation rules, thus optimizing the build process.
 - **Adherence to Coding Standards and Normative Writing (42 norm)**:
   - Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
-- **Development of Skills in Research and Technical Documentation**:
-  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
 - **Basic Integration of Git Workflow**:
   - Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
 
@@ -89,7 +89,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	i = ft_strlen(s1) + ft_strlen(s2);
-	new = (char *)malloc(sizeof(char) * (i + 1));
+	new = malloc(sizeof(char) * (i + 1));
 	if (!new)
 		return (NULL);
 	i = 0;
@@ -156,13 +156,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	curr = *lst;
-	while (curr->
-
-next)
+	while (curr-> next)
 		curr = curr->next;
 	curr->next = new;
 }
 ```
-
-## Resources and Documentation
-- [Libc Manuals](https://linux.die.net/man/)

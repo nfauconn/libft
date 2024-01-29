@@ -6,7 +6,7 @@
 /*   By: nfauconn <nfauconn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:01:03 by nfauconn          #+#    #+#             */
-/*   Updated: 2024/01/23 14:28:27 by nfauconn         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:09:34 by nfauconn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 
 	nb = (long)n;
 	len = find_len(nb);
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	s = malloc(sizeof(char) * (len + 1));
 	if (!s)
 		return (NULL);
 	s[len--] = '\0';
