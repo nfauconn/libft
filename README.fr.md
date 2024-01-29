@@ -4,7 +4,7 @@
 # Projet: Libft
 
 ## 🏁 Objectif 🏁
-Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
+Recoder un ensemble de fonctions de la libc, ainsi que d'autres fonctions utilitaires.
 
 ## 💡 Enjeux et apprentissages 💡
 
@@ -24,8 +24,6 @@ Créer notre propre bibliothèque C en recodant un ensemble de fonctions de la l
 - **Intégration Basique des Flux de Travail Git** : Maîtrise des commandes fondamentales telles que `git add`, `git commit`, `git push`, et `git pull` pour un contrôle efficace des versions.
 
 ## 📋 Contenu du Projet 📋 
-
-Projet solo
 
 ### Recoder un ensemble de fonctions de la libc
 1. **Sans aucune fonction externe**: isalpha
