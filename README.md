@@ -1,34 +1,11 @@
 [![en](https://img.shields.io/badge/lang-en-pink.svg)](https://github.com/nfauconn/libft/blob/master/README.md)
 [![fr](https://img.shields.io/badge/lang-fr-purple.svg)](https://github.com/nfauconn/libft/blob/master/README.fr.md)
 
-# Project: Libft
+# Libft
 
-## 🏁 Goal 🏁
+## Summary
 Recoding a set of functions from the libc, as well as other utility functions.
 
-## 💡 Learning 💡
-
-### 🌐 Language: C 🌐
-  - **Analysis and Re-engineering of Standard libc Functions**:
-    - Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
-  - **Mastery of Pointers**:
-    - Using pointers for precise memory management and data structures.
-  - **Memory Management**:
-    - Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
-
-### 🔧 Development Practices and Tools 🔧
-- **Development of Skills in Research and Technical Documentation**:
-  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
-- **Mastery of Compilation Automation with Makefile**:
-  - Using Makefile for creating automated compilation rules, thus optimizing the build process.
-- **Adherence to Coding Standards and Normative Writing (42 norm)**:
-  - Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
-- **Basic Integration of Git Workflow**:
-  - Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
-
-## 📋 Subject 📋
-
-### Recoding a set of libc functions
 1. **Without any external function**: isalpha
 • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi
 2. **Using only `malloc`**: calloc
@@ -104,33 +81,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 ```
-
-```c
-#include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			n = -n;
-			ft_putchar_fd('-', fd);
-		}
-		if (n >= 10)
-		{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putnbr_fd(n % 10, fd);
-		}
-		else
-			ft_putchar_fd(n + '0', fd);
-	}
-}
-```
  
-### Bonus Part: list manipulation
+### List manipulation
 - `ft_lstnew`: Allocates (with malloc(3)) and returns a new element. The member variable ’content’ is initialized using the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
 - `ft_lst_add_front`: Adds the element ’new’ at the beginning of the list.
 - `ft_lst_add_back`: Adds the element ’new’ at the end of the list.
@@ -159,3 +111,21 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	curr->next = new;
 }
 ```
+
+## Skills
+
+  - **Analysis and Re-engineering of Standard libc Functions**:
+    - Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
+  - **Mastery of Pointers**:
+    - Using pointers for precise memory management and data structures.
+  - **Memory Management**:
+    - Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
+
+- **Development of Skills in Research and Technical Documentation**:
+  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
+- **Mastery of Compilation Automation with Makefile**:
+  - Using Makefile for creating automated compilation rules, thus optimizing the build process.
+- **Adherence to Coding Standards and Normative Writing (42 norm)**:
+  - Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
+- **Basic Integration of Git Workflow**:
+  - Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
