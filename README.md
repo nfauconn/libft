@@ -6,10 +6,12 @@
 ## Summary
 Recoding a set of functions from the libc, as well as other utility functions.
 
-1. **Without any external function**: isalpha
-• isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi
-2. **Using only `malloc`**: calloc
-• strdup
+*C programming language* • *Standard libc Functions* • *Pointers* • *Binary Operations* • *Low-Level Type Conversions* • *Memory Management* • *Error Management* • *Coding Standards (Norm Compliance)* • *Compilation Automation with Makefile* • *Basic Git workflow*
+
+| External function| Function to Implement|
+|-|-|
+**Without any external function** | `isalpha`  `isdigit`  `isalnum`  `isascii`  `isprint`  `strlen`  `memset`  `bzero`  `memcpy`  `memmove`  `strlcpy`  `strlcat`  `toupper`  `tolower`  `strchr`  `strrchr`  `strncmp`  `memchr`  `memcmp`  `strnstr`  `atoi`
+**Using only `malloc`** | `calloc`  `strdup`
 ```c
 #include "libft.h"
 
@@ -40,18 +42,19 @@ int	ft_atoi(const char *s)
 }
 ```
 ### Coding Utility Functions
-- `ft_substr`: Allocates (with malloc(3)) and returns a string from the string ’s’. This new string starts at index ’start’ and has a maximum size of ’len’.
-- `ft_strtrim`: Allocates (with malloc(3)) and returns a copy of the string ’s1’, without the characters specified in ’set’ at the beginning and the end of the string.
-- `ft_split`: Allocates (with malloc(3)) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter.
-- `ft_strjoin`: Allocates (with malloc(3)) and returns a new string, resulting from the concatenation of s1 and s2.
-- `ft_itoa`: Allocates (with malloc(3)) and returns a string representing the integer ’n’ received as an argument. Negative numbers must be handled.
-- `ft_strmapi`: Applies the function ’f’ to each character of the string passed as an argument to create a new string resulting from successive applications of ’f’.
-- `ft_striteri`: Applies the function ’f’ to each character of the string passed as an argument, and passing its index as the first argument. Each character is passed by address to ’f’ to be modified if necessary.
-- `ft_putchar_fd`: Writes the character ’c’ on the given file descriptor.
-- `ft_putstr_fd`: Writes the string ’s’ on the given file descriptor.
-- `ft_putendl_fd`: Writes the string ’s’ on the given file descriptor followed by a newline.
-- `ft_putnbr_fd`: Writes the integer ’n’ on the given file descriptor.
-
+| Function | Description |
+|----------|-------------|
+| `ft_substr` | Allocates (with malloc(3)) and returns a string from the string ’s’. This new string starts at index ’start’ and has a maximum size of ’len’. |
+| `ft_strtrim` | Allocates (with malloc(3)) and returns a copy of the string ’s1’, without the characters specified in ’set’ at the beginning and the end of the string. |
+| `ft_split` | Allocates (with malloc(3)) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. |
+| `ft_strjoin` | Allocates (with malloc(3)) and returns a new string, resulting from the concatenation of s1 and s2. |
+| `ft_itoa` | Allocates (with malloc(3)) and returns a string representing the integer ’n’ received as an argument. Negative numbers must be handled. |
+| `ft_strmapi` | Applies the function ’f’ to each character of the string passed as an argument to create a new string resulting from successive applications of ’f’. |
+| `ft_striteri` | Applies the function ’f’ to each character of the string passed as an argument, and passing its index as the first argument. Each character is passed by address to ’f’ to be modified if necessary. |
+| `ft_putchar_fd` | Writes the character ’c’ on the given file descriptor. |
+| `ft_putstr_fd` | Writes the string ’s’ on the given file descriptor. |
+| `ft_putendl_fd` | Writes the string ’s’ on the given file descriptor followed by a newline. |
+| `ft_putnbr_fd` | Writes the integer ’n’ on the given file descriptor. |
 ```c
 #include "libft.h"
 
@@ -83,16 +86,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 ```
  
 ### List manipulation
-- `ft_lstnew`: Allocates (with malloc(3)) and returns a new element. The member variable ’content’ is initialized using the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
-- `ft_lst_add_front`: Adds the element ’new’ at the beginning of the list.
-- `ft_lst_add_back`: Adds the element ’new’ at the end of the list.
-- `ft_lst_size`: Counts the number of elements in the list.
-- `ft_lst_last`: Returns the last element of the list.
-- `ft_lst_delone`: Frees the memory of the element passed as an argument using the function ’del’ then with free(3). The memory of ’next’ must not be freed.
-- `ft_lst_clear`: Deletes and frees the memory of the element passed as a parameter, and all the elements that follow, using ’del’ and free(3). Finally, the initial pointer should be set to NULL.
-- `ft_lst_iter`: Iterates over the list ’lst’ and applies the function ’f’ to the content of each element.
-- `ft_lst_map`: Iterates over the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting from successive applications of ’f’. The function ’del’ is there to destroy the content of an element if necessary.
-
+| Function | Description |
+|----------|-------------|
+| `ft_lstnew` | Allocates (with malloc(3)) and returns a new element. The member variable ’content’ is initialized using the value of the parameter ’content’. The variable ’next’ is initialized to NULL. |
+| `ft_lst_add_front` | Adds the element ’new’ at the beginning of the list. |
+| `ft_lst_add_back` | Adds the element ’new’ at the end of the list. |
+| `ft_lst_size` | Counts the number of elements in the list. |
+| `ft_lst_last` | Returns the last element of the list. |
+| `ft_lst_delone` | Frees the memory of the element passed as an argument using the function ’del’ then with free(3). The memory of ’next’ must not be freed. |
+| `ft_lst_clear` | Deletes and frees the memory of the element passed as a parameter, and all the elements that follow, using ’del’ and free(3). Finally, the initial pointer should be set to NULL. |
+| `ft_lst_iter` | Iterates over the list ’lst’ and applies the function ’f’ to the content of each element. |
+| `ft_lst_map` | Iterates over the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting from successive applications of ’f’. The function ’del’ is there to destroy the content of an element if necessary. |
 ```c
 #include "libft.h"
 
@@ -111,21 +115,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	curr->next = new;
 }
 ```
-
-## Skills
-
-  - **Analysis and Re-engineering of Standard libc Functions**:
-    - Understanding the internal workings and the ability to recode standard functions for in-depth mastery.
-  - **Mastery of Pointers**:
-    - Using pointers for precise memory management and data structures.
-  - **Memory Management**:
-    - Advanced techniques for memory management, including allocation, release, and optimization of memory usage.
-
-- **Development of Skills in Research and Technical Documentation**:
-  - Cultivating a methodical approach to research and understanding of technical documentation, thus strengthening autonomy in problem-solving and learning new technologies.
-- **Mastery of Compilation Automation with Makefile**:
-  - Using Makefile for creating automated compilation rules, thus optimizing the build process.
-- **Adherence to Coding Standards and Normative Writing (42 norm)**:
-  - Rigorous application of the 42 coding standard to ensure readability, maintainability, and code quality, while facilitating collaboration and peer review.
-- **Basic Integration of Git Workflow**:
-  - Mastery of fundamental commands such as `git add`, `git commit`, `git push`, and `git pull` for efficient version control.
