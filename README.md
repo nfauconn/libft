@@ -1,12 +1,13 @@
 [![en](https://img.shields.io/badge/lang-en-pink.svg)](https://github.com/nfauconn/libft/blob/master/README.md)
 [![fr](https://img.shields.io/badge/lang-fr-purple.svg)](https://github.com/nfauconn/libft/blob/master/README.fr.md)
 
+*C programming language* • *Standard libc Functions* • *Pointers* • *Binary Operations* • *Low-Level Type Conversions* • *Memory Management* • *Error Management* • *Coding Standards (Norm Compliance)* • *Compilation Automation with Makefile* • *Basic Git workflow*
+
 # Libft
 
-## Summary
 Recoding a set of functions from the libc, as well as other utility functions.
 
-*C programming language* • *Standard libc Functions* • *Pointers* • *Binary Operations* • *Low-Level Type Conversions* • *Memory Management* • *Error Management* • *Coding Standards (Norm Compliance)* • *Compilation Automation with Makefile* • *Basic Git workflow*
+### Libc functions
 
 | External function| Function to Implement|
 |-|-|
@@ -41,7 +42,7 @@ int	ft_atoi(const char *s)
 	return ((int)(nbr * sign));
 }
 ```
-### Coding Utility Functions
+### Non-libc Utility Functions
 | Function | Description |
 |----------|-------------|
 | `ft_substr` | Allocates (with malloc(3)) and returns a string from the string ’s’. This new string starts at index ’start’ and has a maximum size of ’len’. |
