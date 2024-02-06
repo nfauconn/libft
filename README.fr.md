@@ -76,15 +76,38 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s1[i])
 		new[j++] = s1[i++];
 	i = 0;
-	while (s
-
-2[i])
+	while (s2[i])
 	{
 		new[j + i] = s2[i];
 		i++;
 	}
 	new[j + i] = '\0';
 	return (new);
+}
+```
+
+```c
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
+	{
+		if (n < 0)
+		{
+			n = -n;
+			ft_putchar_fd('-', fd);
+		}
+		if (n >= 10)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else
+			ft_putchar_fd(n + '0', fd);
+	}
 }
 ```
 
@@ -96,7 +119,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 | `ft_lst_add_back` | Ajoute l'élément ’new’ à la fin de la liste. |
 | `ft_lst_size` | Compte le nombre d'éléments dans la liste. |
 | `ft_lst_last` | Retourne le dernier élément de la liste. |
-| `ft_lst_delone` | Libère la mémoire de l'élément passé en argument en utilisant la fonction ’del’ puis avec free(3). La mémoire de ’next’ ne doit pas être libérée. |
+| `ft_lst_delone` | Libère la mémoire de l'élément passé en argument en utilisant la fonction ’del’ passee en argument puis avec free(3). La mémoire de ’next’ ne doit pas être libérée. |
 | `ft_lst_clear` | Supprime et libère la mémoire de l'élément passé en paramètre, et de tous les éléments qui suivent, en utilisant ’del’ et free(3). Finalement, le pointeur initial doit être mis à NULL. |
 | `ft_lst_iter` | Itère sur la liste ’lst’ et applique la fonction ’f’ au contenu de chaque élément. |
 | `ft_lst_map` | Itère sur la liste ’lst’ et applique la fonction ’f’ au contenu de chaque élément. Crée une nouvelle liste résultant des applications successives de ’f’. La fonction ’del’ est là pour détruire le contenu d'un élément si nécessaire. |
